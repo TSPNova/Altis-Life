@@ -20,12 +20,6 @@ PVAR_ALL("life_server_isReady");
 
 ["AltisLife","SQL_CUSTOM_V2","altis-life-rpg-4"] call DB_fnc_init;
 
-/* Run stored procedures for SQL side cleanup */
-["resetLifeVehicles",1] spawn DB_fnc_asyncCall;
-["deleteDeadVehicles",1] spawn DB_fnc_asyncCall;
-["deleteOldHouses",1] spawn DB_fnc_asyncCall;
-["deleteOldGangs",1] spawn DB_fnc_asyncCall;
-
 /* Map-based server side initialization. */
 master_group attachTo[bank_obj,[0,0,0]];
 onMapSingleClick "if(_alt) then {vehicle player setPos _pos};"; //Local debug for myself
