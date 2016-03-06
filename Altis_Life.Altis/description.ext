@@ -1,6 +1,6 @@
 author = "Tonic and Itsyuka";
 onLoadName = "Altis Life RPG v4.0";
-onLoadMission = "An RPG game mode developed by Tonic";
+onLoadMission = "An RPG game mode developed by Tonic modified for TSP";
 joinUnassigned = 1;
 respawn = BASE;
 respawndelay = 5;
