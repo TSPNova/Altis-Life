@@ -125,7 +125,7 @@ _adminUIDandAccess =
 		]
 	],
 	[
-	    ['76561198051263830','76561198058410520','76561198123536218,'UID4','...'],	// Admins with UIDs in this Array have their Access defined in the array below.
+	    ['76561198051263830','76561198058410520','76561198123536218','UID4','...'],	// Admins with UIDs in this Array have their Access defined in the array below.
 		[
 			'Teleport On Map Click','Teleport - Target To Me','Teleport - Me To Target','Teleport In Facing Direction (10m steps)',
 			'spectating','AdminConsole','Delete Vehicle','FlyUp','EjectTarget','ToggleVehLock','UpgradeBuilding','ShowGear',
