@@ -17,7 +17,7 @@ _queryStmt = [_this,0,"",[""]] call BIS_fnc_param;
 _mode = [_this,1,1,[0]] call BIS_fnc_param;
 _multiarr = [_this,2,false,[false]] call BIS_fnc_param;
 
-_key = "extDB" callExtension format["%1:%2:%3",_mode,(call life_sql_id),_queryStmt];
+_key = "extDB" callExtension format["%1:%2:%3",_mode,(call extDB_SQL_CUSTOM_ID),_queryStmt];
 
 if(_mode == 1) exitWith {DB_Async_Active = false; true};
 
@@ -58,14 +58,15 @@ DB_Async_Active = false;
 _queryResult = call compile _queryResult;
 
 // Not needed, its SQF Code incase extDB ever returns error message i.e Database Died
-if ((_queryResult select 0) == 0) exitWith {diag_log format ["extDB: Error: %1", _queryResult]; []};
-_queryResult = (_queryResult select 1);
+diag_log format ["ExtDB Query Response: %1",_queryResult];
 if ((_queryResult select 0) == 0) exitWith {diag_log format ["extDB: Protocol Error: %1", _queryResult]; []};
-if(count (_queryResult select 1) == 0) exitWith {[]};
-_return = (_queryResult select 1);
+_queryResult = (_queryResult select 1);
+
+if(count _queryResult == 0) exitWith {[]};
+_return = _queryResult;
 
 if(!_multiarr) then {
-        _return = _return select 0;
+		_return = _return select 0;
 };
 
 _return;
