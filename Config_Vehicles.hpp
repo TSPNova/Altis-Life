@@ -14,7 +14,7 @@ class CarShops {
 			{ "C_SUV_01_F", 30000, "driver" },
 			{ "C_Hatchback_01_sport_F", 40000, "driver" },
 			{ "C_Van_01_transport_F", 45000, "driver" },
-			{ "Jonzie_Escalade.pbo", 12000, "driver" }
+			{ "Jonzie_Escalade", 12000, "driver" }
 		};
 	};
 
